@@ -29,7 +29,7 @@ class FilterStr extends Component {
     render() {
         return (
             <section>
-                <h2>{this.state.players}</h2>
+                <h2>{JSON.stringify( this.state.players, null, 10)}</h2>
                 <input onChange={(e)=>this.handleChange(e.target.value)}/>
                 <button onClick={()=>this.filter(this.state.userInput)}>Filter</button>
                 <h2>{this.state.filteredPlayers}</h2>
