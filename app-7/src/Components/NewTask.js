@@ -4,7 +4,7 @@ class NewTask extends Component {
     constructor () {
         super()
         this.state = {
-            userInput: ''
+            input: ''
         }
         this.handleAdd = this.handleAdd.bind(this)
     }
@@ -14,15 +14,15 @@ class NewTask extends Component {
     }
 
     handleAdd() {
-        this.props.add(this.state.userInput)
-        this.setState({userInput: ''})
+        this.props.add(this.state.input)
+        this.setState({input: ''})
     }
 
     render() {
         return(
             <section>   
                 <input
-                value = {this.state.userInput}
+                value = {this.state.input}
                 onChange={e=>this.handleInputChange(e.target.value)}
                 />
                 <button onClick={this.handleAdd}>Add</button>
